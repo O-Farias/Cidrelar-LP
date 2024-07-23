@@ -251,5 +251,20 @@ body {
   .contact-form {
     flex: 1 1 100%; /* Ocupa toda a linha em telas menores */
     max-width: 100%;
+    text-align: center; /* Centraliza o texto em dispositivos móveis */
+  }
+
+  .about-content img {
+    margin-left: 0; /* Remove a margem à esquerda */
+    margin-top: 20px; /* Espaçamento superior para a imagem em telas menores */
+  }
+
+  .about-content h2,
+  .about-content p {
+    margin-left: 0; /* Remove a margem à esquerda */
+  }
+
+  .contact-form {
+    margin-top: 20px; /* Ajustar a margem superior */
   }
 }
