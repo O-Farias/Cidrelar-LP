@@ -15,14 +15,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       crossorigin="anonymous"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="/images/Favicon.png" type="image/x-icon" />
   </head>
   <body>
-    <header class="header">
+    <header class="header" data-aos="fade-down">
       <img src="/images/logo.png" alt="Logo" class="logo" />
     </header>
     <main class="main-container">
-      <section class="main-section">
+      <section class="main-section" data-aos="fade-up">
         <img src="/images/1.jpg" alt="Product" class="product-image" />
         <h1>R$2.000,00</h1>
         <p>
@@ -33,10 +41,10 @@
         </p>
         <button class="btn"><i class="fab fa-whatsapp"></i> Encomendar</button>
       </section>
-      <section class="suggested-products">
+      <section class="suggested-products" data-aos="fade-up">
         <h2>Você também pode gostar:</h2>
         <div class="products-wrapper">
-          <div class="product">
+          <div class="product" data-aos="fade-up" data-aos-delay="100">
             <img src="/images/2.jpg" alt="Product 1" />
             <h3>R$2.000,00</h3>
             <p>
@@ -49,7 +57,7 @@
               <i class="fab fa-whatsapp"></i> Encomendar
             </button>
           </div>
-          <div class="product">
+          <div class="product" data-aos="fade-up" data-aos-delay="200">
             <img src="/images/3.jpg" alt="Product 2" />
             <h3>R$2.000,00</h3>
             <p>
@@ -62,7 +70,7 @@
               <i class="fab fa-whatsapp"></i> Encomendar
             </button>
           </div>
-          <div class="product">
+          <div class="product" data-aos="fade-up" data-aos-delay="300">
             <img src="/images/4.jpg" alt="Product 3" />
             <h3>R$2.000,00</h3>
             <p>
@@ -77,6 +85,59 @@
           </div>
         </div>
       </section>
+      <section class="about-us" data-aos="fade-up">
+        <div class="about-content">
+          <h2>Sobre nós</h2>
+          <p>
+            Como é bom poder comprar e ter certeza que você vai receber um
+            produto de valor em casa, entregue com toda dedicação e qualidade.
+            Isso é o que você ganha com a Cidrelar estando onde estiver.
+            Mantemos a fidelidade muito especial desde o atendimento
+            qualificado, passando na personalização dos ambientes para sua casa.
+            Com os móveis, você pode contar com projetos, orçamentos, montagem e
+            instalação própria! Com a garantia de uma empresa séria e
+            comprometida com o cliente.
+          </p>
+          <img src="/images/loja.jpg" alt="Nossa loja" class="about-image" />
+        </div>
+        <div class="contact-form">
+          <h2>Deixe seu contato</h2>
+          <div class="arrow-down"><i class="fas fa-arrow-down"></i></div>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfDbl7n8eQUvG5kE4pY5yKFFz4FlD_wjZj5D5R2sZJ4Bs14gA/viewform"
+            target="_blank"
+            class="btn"
+          >
+            <i class="fas fa-paper-plane"></i> Preencher formulário
+          </a>
+        </div>
+      </section>
     </main>
+    <footer class="footer" data-aos="fade-up">
+      <p>© 2024 Cidrelar. Todos os direitos reservados.</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/cidrelar.morrinhos/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true, // Garante que a animação ocorra apenas uma vez
+      });
+
+      // Função para iniciar a animação na primeira rolagem
+      function handleScroll() {
+        // Remove o evento de scroll após a primeira execução
+        window.removeEventListener("scroll", handleScroll);
+
+        // Inicializa o AOS novamente para garantir que as animações sejam aplicadas
+        AOS.refresh();
+      }
+
+      // Adiciona o evento de scroll
+      window.addEventListener("scroll", handleScroll, { once: true });
+    </script>
   </body>
 </html>
